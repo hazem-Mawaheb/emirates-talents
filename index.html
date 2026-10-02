@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواهب الإمارات لحلول القوى العاملة</title>
+    <style>
+        /* تنسيقات الألوان والخلفيات العامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #002b49, #005689);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 { margin: 0; font-size: 28px; }
+        .header p { margin: 10px 0 0 0; opacity: 0.9; }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        /* تصميم البطاقات والنماذج */
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #007bff;
+        }
+        .form-card.job-seeker {
+            border-top-color: #28a745;
+        }
+        
+        .form-card h2 {
+            margin-top: 0;
+            color: #002b49;
+            font-size: 22px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* تنسيق خانات الإدخال */
+        label {
+            display: block;
+            margin: 15px 0 5px 0;
+            font-weight: 600;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+            background-color: #fafafa;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #007bff;
+            background-color: #fff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,123,255,0.2);
+        }
+        
+        /* الأزرار الملونة */
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.2s ease;
+        }
+        .btn-company { background-color: #007bff; }
+        .btn-company:hover { background-color: #0056b3; }
+        
+        .btn-seeker { background-color: #28a745; }
+        .btn-seeker:hover { background-color: #1e7e34; }
+        
+        /* تكييف العرض للهواتف */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .form-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- الهيدر أو ترويسة الموقع -->
+        <div class="header">
+            <h1>مواهب الإمارات لحلول القوى العاملة</h1>
+            <p>المنصة الموحدة لتلبية احتياجات الشركات وتوظيف الكفاءات الوطنية والخبرات المقيمة</p>
+        </div>
+
+        <!-- 1. بوابة الشركات -->
+        <div class="form-card">
+            <h2>🏢 بوابة الشركات والمنشآت</h2>
+            <p style="color: #666; font-size: 14px;">خاص بأصحاب العمل والمنشآت لطلب العمالة المهنية والمساعدة.</p>
+            
+            <form action="https://formspree.io" method="POST">
+                <input type="hidden" name="نوع_الطلب" value="شركة / منشأة">
+                
+                <label>اسم الشركة / المنشأة المستفيدة *</label>
+                <input type="text" name="اسم_الشركة" required placeholder="مثال: شركة الخليج للتجارة">
+
+                <label>رقم الموبايل للتواصل *</label>
+                <input type="tel" name="الموبايل" required placeholder="050XXXXXXXX">
+
+                <label>رقم الواتساب *</label>
+                <input type="tel" name="الواتساب" required placeholder="050XXXXXXXX">
+
+                <label>البريد الإلكتروني التجاري *</label>
+                <input type="email" name="_replyto" required placeholder="info@company.com">
+
+                <label>موقع العمل الفعلي داخل الدولة *</label>
+                <select name="موقع_العمل" required>
+                    <option value="">اختر الإمارة...</option>
+                    <option value="أبوظبي">أبوظبي</option>
+                    <option value="دبي">دبي</option>
+                    <option value="الشارقة">الشارقة</option>
+                    <option value="عجمان">عجمان</option>
+                    <option value="أم القيوين">أم القيوين</option>
+                    <option value="رأس الخيمة">رأس الخيمة</option>
+                    <option value="الفجيرة">الفجيرة</option>
+                </select>
+
+                <label>نوع العمالة المطلوبة *</label>
+                <select name="نوع_العمالة" required>
+                    <option value="">اختر النوع...</option>
+                    <option value="عمالة ماهرة / متخصصة">عمالة ماهرة / متخصصة</option>
+                    <option value="عمالة مساندة / عادية">عمالة مساندة / عادية</option>
+                </select>
+
+                <label>المسمى الوظيفي المطلوب *</label>
+                <input type="text" name="المسمى_الوظيفي" required placeholder="مثال: مهندس مدني، محاسب، سائق">
+
+                <label>العدد المطلوب من العمال *</label>
+                <input type="number" name="العدد_المطلوب" required min="1" placeholder="1">
+
+                <button type="submit" class="btn-company">إرسال طلب استقدام العمالة ⬅</button>
+            </form>
+        </div>
+
+        <!-- 2. بوابة الباحثين عن عمل -->
+        <div class="form-card job-seeker">
+            <h2>👤 بوابة الباحثين عن عمل (الأفراد)</h2>
+            <p style="color: #666; font-size: 14px;">سجل بياناتك المهنية وخبراتك لتوصيلك بأصحاب العمل والشركات.</p>
+            
+            <form action="https://formspree.io" method="POST">
+                <input type="hidden" name="نوع_الطلب" value="باحث عن عمل">
+
+                <label>الاسم الكامل *</label>
+                <input type="text" name="الاسم_الكامل" required placeholder="أدخل اسمك الثلاثي">
+
+                <label>رقم الموبايل *</label>
+                <input type="tel" name="الموبايل" required placeholder="050XXXXXXXX">
+
+                <label>رقم الواتساب *</label>
+                <input type="tel" name="الواتساب" required placeholder="050XXXXXXXX">
+
+                <label>البريد الإلكتروني *</label>
+                <input type="email" name="_replyto" required placeholder="name@example.com">
+
+                <label>تصنيف الوظيفة المستهدفة *</label>
+                <select name="تصنيف_الوظيفة" required>
+                    <option value="">اختر التصنيف...</option>
+                    <option value="هندسة وإنشاءات">هندسة وإنشاءات</option>
+                    <option value="تكنولوجيا معلومات وبرمجة">تكنولوجيا معلومات وبرمجة</option>
+                    <option value="إدارة ومحاسبة ومالية">إدارة ومحاسبة ومالية</option>
+                    <option value="مبيعات وتسويق وخدمة عملاء">مبيعات وتسويق وخدمة عملاء</option>
+                    <option value="وظائف مهنية وحرفية">وظائف مهنية وحرفية</option>
+                    <option value="أخرى">أخرى</option>
+                </select>
+
+                <label>التخصص المهني الدقيق *</label>
+                <input type="text" name="التخصص_الدقيق" required placeholder="مثال: مطور ويب، محاسب قانوني، فني كهرباء">
+
+                <label>الوظيفة المرجو التعيين عليها حالياً *</label>
+                <input type="text" name="الوظيفة_المستهدفة" required placeholder="اكتب المسمى الوظيفي الذي تبحث عنه">
+
+                <button type="submit" class="btn-seeker">إرسال طلب التسجيل في المنصة ⬅</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
